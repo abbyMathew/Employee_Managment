@@ -45,7 +45,7 @@ namespace EmployeeManagement.API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("EmployeeSummary")]
+        [HttpGet("EmployeeSummary")]// To get the whole employee summary, we can use this endpoint. It will return the total number of employees, active employees, inactive employees, average salary, highest salaried employee, and department-wise summary.
         public async Task<IActionResult> EmployeeSummaryAsync()
         {
             var result = await _employeeService.EmployeeSummaryAsync();
