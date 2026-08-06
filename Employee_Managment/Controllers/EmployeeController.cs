@@ -30,7 +30,7 @@ namespace EmployeeManagement.API.Controllers
 
             if (result != "Created")
             {
-                return BadRequest("Wrong Date");
+                return BadRequest("Wrong Date");//If the result is not "Created", return a 400 Bad Request response with a message
             }
 
             return Ok(result);
@@ -41,7 +41,7 @@ namespace EmployeeManagement.API.Controllers
         {
             var result = await _employeeService.SearchEmployeeParamAsync(name, department, minSalary, maxSalary, isactive);
             if (!result.Any())
-                return NotFound("No employee details");
+                return NotFound("No employee details"); //If no employee details are found, return a 404 Not Found response with a message
             return Ok(result);
         }
 
@@ -50,7 +50,7 @@ namespace EmployeeManagement.API.Controllers
         {
             var result = await _employeeService.EmployeeSummaryAsync();
            
-            return Ok(result);
+            return Ok(result); // Git Learning: Return the result of the employee summary as an HTTP 200 OK response
         }
     }
 
