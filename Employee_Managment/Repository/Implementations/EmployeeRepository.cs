@@ -68,7 +68,7 @@ namespace EmployeeManagement.Repository.Implementations
             })
                 .ToListAsync();
 
-            return EmployeeSummary;
+            return EmployeeSummary;// Git Learning: Return the EmployeeSummary object containing the summary of employees
         }
     }
 }
