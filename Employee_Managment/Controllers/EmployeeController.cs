@@ -36,7 +36,7 @@ namespace EmployeeManagement.API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("SearchEmployee")]
+        [HttpGet("SearchEmployee")]// To search for employees based on various parameters, we can use this endpoint. It will return a list of employees that match the specified criteria.
         public async Task<IActionResult> SearchEmployeeParamAsync(string? name, string? department, decimal? minSalary, decimal? maxSalary, bool? isactive)
         {
             var result = await _employeeService.SearchEmployeeParamAsync(name, department, minSalary, maxSalary, isactive);
