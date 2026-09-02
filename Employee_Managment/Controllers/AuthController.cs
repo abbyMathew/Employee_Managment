@@ -15,7 +15,7 @@ namespace Employee_Managment.Controllers
             _jwtService = jwtService;
         }
 
-        [HttpPost("Login")]//Controller method for user login
+        [HttpPost("Login")]
         public IActionResult Login(LoginRequest request)
         {
             if (request.UserName != "admin" || request.Password != "admin123")
