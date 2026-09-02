@@ -30,7 +30,7 @@ namespace Employee_Managment.Controllers
                 Role = "Admin"
             };
 
-            var token = _jwtService.GenerateToken(user);//Generate JWT token for the authenticated user
+            var token = _jwtService.GenerateToken(user);
             return Ok(new { Token = token });
         }
     }
