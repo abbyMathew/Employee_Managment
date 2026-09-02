@@ -10,7 +10,7 @@ namespace Employee_Managment.Controllers
     {
         private readonly IJwtService _jwtService;
 
-        public AuthController(IJwtService jwtService)
+        public AuthController(IJwtService jwtService)// Constructor injection of the IJwtService dependency
         {
             _jwtService = jwtService;
         }
