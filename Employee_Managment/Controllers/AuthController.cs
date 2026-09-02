@@ -18,7 +18,7 @@ namespace Employee_Managment.Controllers
         [HttpPost("Login")]
         public IActionResult Login(LoginRequest request)
         {
-            if (request.UserName != "admin" || request.Password != "admin123")
+            if (request.UserName != "admin" || request.Password != "admin123")// Replace with your own authentication logic
             {
                 return Unauthorized("Invalid username or password.");
             }
